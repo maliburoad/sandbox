@@ -1,0 +1,17 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <to>FR1/LTX</to>
+        <from>BTS_OM</from>
+        <id>94</id>
+        <action>OBSAI_CM</action>
+        <version>2.0</version>
+        <responseRequested></responseRequested>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <modifyParameterReq>
+            <managedObject class="RtwpReport" distName="RtwpReport_Slave_4">
+                <operation>delete_mo</operation>
+            </managedObject>
+        </modifyParameterReq>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

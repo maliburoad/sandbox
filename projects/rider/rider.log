@@ -1,0 +1,7 @@
+DEBUG 2017-05-16 12:05:08,952 writing to file
+DEBUG 2017-05-16 12:05:08,952 reading the file
+DEBUG 2017-05-16 12:05:08,952 searching the occurences od RE
+INFO 2017-05-16 12:05:08,953 Found 3 items: ['09-12-1979', '15-12-1979', '22-12-1979']
+DEBUG 2017-05-16 12:05:08,953 replace the occurences of RE
+DEBUG 2017-05-16 12:05:08,954 writing to file
+DEBUG 2017-05-16 12:05:08,954 reading the file

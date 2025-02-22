@@ -1,0 +1,41 @@
+Repo
+https://wrgitlab.ext.net.nokia.com/RFSW-STARKILLERS-INT/SWmanUpdater2
+
+Cloning:
+git clone https://wrgitlab.ext.net.nokia.com/RFSW-STARKILLERS-INT/SWmanUpdater2.git
+
+Artifactory:
+https://artifactory-espoo1.ext.net.nokia.com/artifactory/mn-rfsw-brft-frm6-local/FRM6/
+
+Reseting repo:
+git checkout main
+git clean -dfx
+git fetch origin
+git reset --hard main
+git pull
+
+
+Commiting change:
+git add *
+git commit -m "my comment"
+git push
+
+
+TODO
+===========================
+1. To add in console link print: 
+https://artifactory-espoo1.int.net.nokia.com/artifactory/mn-rfsw-brft-frm6-local/FRM6/
+
+2. To split into lines this print:
+login:"rfsw" password:"0q/7SXKjF2AlAba+yisrCxQiKz1PRJJ0IVDZuh/sOaA=" on host:192.168.255.206
+
+3. To add pcode, hwid, sw version
+
+*** Unit Info ***
+AWMFIA.X12, First prototype TRX, AWMFIA HW Build 1.0, MADE ES2.0
+YK232500003
+
+*** Unit Info ***
+
+4. Add green passion theme
+

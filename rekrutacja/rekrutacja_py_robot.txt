@@ -1,0 +1,76 @@
+#####
+def BezuzytecznaFunkcja():
+    a = [(2, 3, 4), 2, 'trzy']
+    b = a
+    b[0] = 1
+
+    print(a)
+    print(b.sort())
+
+    
+#######    
+def PoCoTaFunkcja(self):
+    try:
+        lista = (1,2,3)
+        lista[1] = 2
+    except:
+        print()
+    except ZeroDivisionError:
+        print()
+
+
+#######
+def BezuzytecznyKod():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(options=options, "C:\\Users\\user\\IdeaProjects\\untitled2\\chromedriver.exe")
+    driver.get("www.google.pl")
+    assert driver.find_element(By.xpath("/html/body/div[1]/div[2]/div/img")).is_displayed()
+    assert driver.title == 'Google'
+
+
+#######
+@dataclass
+class TableData:
+    table_model: TableModel
+    data: List[Tuple[Any, ...]] = field(init=None)
+      
+    def __post_init__(self):
+      if self.data is False:
+          self.data = []
+          
+    @property
+    def data_to_dict(self):
+      for line in self.data:
+        yield {'table_name': self.table_model.table_name,
+                   'data': dict(zip(self.table_model.columns, line))
+                   }
+      
+
+
+######
+
+*** Settings ***
+Resource          base.robot
+
+*** Variables ***
+${source}    'db'
+
+*** Keywords ***
+Compare with file
+    ${db}    Connect To DB   2
+    Run Keyword if     '${source}'=='srcdb'     Refresh For List Of Tables    ${db}    ${stgTbs}
+    Run Keyword if     '${cond}'=='True'     Refresh For List Of Tables    ${db}    ${dwdb}
+    Run Query And Compare With File    ${db}    ${q}    ${f}
+
+Run Query And Compare With File
+    [Arguments]    ${db}    ${query}    ${file}    ${source}='srcdb'
+  	FOR    ${line}    IN    ${file}
+    	IF    ${line}=='goodstuff'
+      			Pass Execution
+        END
+  	END
+
+*** Test Cases ***
+Compare with file
+    Compare with file
