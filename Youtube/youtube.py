@@ -1,8 +1,3 @@
-"""
-one import needed
-python -m pip install git
-"""
-
 from pytube import YouTube
 from sys import argv
 
