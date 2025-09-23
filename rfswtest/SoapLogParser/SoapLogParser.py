@@ -1,5 +1,5 @@
 # version 2023.08.01
-# grzegorz.ros.ext@nokia.com
+# grzegorz.ros.ext@rfswtest.com
 
 import re
 import os
