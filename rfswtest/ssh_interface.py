@@ -32,8 +32,8 @@ def connectSSH(host, port, user, password):
             t.auth_password(user, password)
         ssh_client._transport = t
     except:
-        print 'EXCEPTION DURING CONNECTING SSH'
-        print sys.exc_info()[0]
+        print('EXCEPTION DURING CONNECTING SSH')
+        print(sys.exc_info()[0])
     if t!=None and t.is_active():
         return ssh_client
 
@@ -63,7 +63,7 @@ def closeSSH(ssh_client):
 
 def Menu():
     os.system('cls')
-    print """
+    print ("""
     =================
     =  cmdSsh       =
     =================
@@ -74,8 +74,8 @@ def Menu():
     5 - hwid
     6 - Exit
     =================
-    """
-    choice = raw_input("Enter a choice and press enter:  ")
+    """)
+    choice = input("Enter a choice and press enter:  ")
     return choice
 
 #TAKE CHOICE AND LAUNCH MODULE
@@ -91,38 +91,38 @@ while choice != "6":
         rfm = connectSSH(host, port, user, password)
         cmd = 'cat /etc/issue'
         out = sendCommandSSH(rfm, cmd)
-        print out
+        print(out)
         closeSSH(rfm)
-        raw_input("Press enter to continue:  ")
+        input("Press enter to continue:  ")
     elif choice == "2":
         os.system('cls')
         rfm = connectSSH(host, port, user, password)
         cmd = 'ls /mnt/factory/configs/unit'
         out = sendCommandSSH(rfm, cmd)
-        print out
+        print(out)
         closeSSH(rfm)
-        raw_input("Press enter to continue:  ")
+        input("Press enter to continue:  ")
     elif choice == "3":
         os.system('cls')
         rfm = connectSSH(host, port, user, password)
         cmd = 'ls /mnt/factory/configs/17/REV_0'
         out = sendCommandSSH(rfm, cmd)
-        print out
+        print(out)
         closeSSH(rfm)
-        raw_input("Press enter to continue:  ")
+        input("Press enter to continue:  ")
     elif choice == "4":
         os.system('cls')
         rfm = connectSSH(host, port, user, password)
         cmd = "ps | grep 'Z'"
         out = sendCommandSSH(rfm, cmd)
-        print out
+        print(out)
         closeSSH(rfm)
-        raw_input("Press enter to continue:  ")
+        input("Press enter to continue:  ")
     elif choice == "5":
         os.system('cls')
         rfm = connectSSH(host, port, user, password)
         cmd = 'cat /mnt/factory/configs/unit/hwid.txt'
         out = sendCommandSSH(rfm, cmd)
-        print out
+        print(out)
         closeSSH(rfm)
-        raw_input("Press enter to continue:  ")
+        input("Press enter to continue:  ")

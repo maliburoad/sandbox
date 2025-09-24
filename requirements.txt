@@ -1,2 +1,11 @@
 pytest
 pytubefix
+httpx
+seaborn
+numpy
+matplotlib
+pandas
+pydantic
+hypothesis
+pyserial
+tkinter

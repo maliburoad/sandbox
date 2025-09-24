@@ -23,8 +23,8 @@ try:
         writeTimeout=2
     )
 except:
-    print 'Port blocked'
-    print sys.exc_info()[0]
+    print('Port blocked')
+    print(sys.exc_info()[0])
 
 
 # time.sleep(3)
@@ -39,12 +39,12 @@ def call(cmd):
 
 
 if ser.is_open:
-    print call(cmd1)[10]
-    print call(cmd2)[1]
-    print call(cmd3)[1]
-    print call(cmd4)[8]
+    print(call(cmd1)[10])
+    print(call(cmd2)[1])
+    print(call(cmd3)[1])
+    print(call(cmd4)[8])
     ser.close()
 
 time.sleep(1)
 
-raw_input("Press enter to continue:  ")
+raw_input=input("Press enter to continue:  ")
